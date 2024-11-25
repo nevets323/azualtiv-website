@@ -23,7 +23,7 @@ export function AuthProvider({ children }) {
 
   const value = {
     currentUser,
-    isAdmin: currentUser?.email === 'admin@azualtiv.com' // Replace with actual admin email
+    isAdmin: currentUser?.email === process.env.REACT_APP_ADMIN_EMAIL
   };
 
   return (
